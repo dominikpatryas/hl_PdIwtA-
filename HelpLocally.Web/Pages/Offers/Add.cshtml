@@ -1,0 +1,25 @@
+﻿@page
+@model HelpLocally.Web.AddModel
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Add Offer</h1>
+
+<div class="col-md-6 text-center">
+    <form method="post">
+        <div class="form-group">
+            <input asp-for="input.Name" name="Name" placeholder="Name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input name="Description" asp-for="input.Description" placeholder="Description" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input name="Price" placeholder="Price" asp-for="input.Price" class="form-control" />
+        </div>
+        <div class="form-group">
+            <select asp-for="input.TypeId" class="form-control" asp-items="ViewBag.TypeId"></select>
+        </div>
+            <input type="submit" value="Add Offer!" class="btn btn-primary" />
+    </form>
+</div>

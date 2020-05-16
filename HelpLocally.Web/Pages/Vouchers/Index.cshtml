@@ -1,0 +1,20 @@
+﻿@page
+@using HelpLocally.Domain;
+@model HelpLocally.Web.IndexModel;
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Vouchers</h1>
+
+@foreach (var item in Model.Vouchers)
+{
+<ul>
+    <li>Nazwa firmy: @item.CompanyName </li>
+    <li>Właściciel: @item.Owner </li>
+    <li>Początkowa wartość: @item.StartAmount </li>
+    <li>Aktualna wartość: @item.CurrentAmount </li>
+    <li>Termin ważności: @item.ExpirationDate </li>
+</ul>
+}

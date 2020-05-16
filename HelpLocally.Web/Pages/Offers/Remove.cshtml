@@ -1,0 +1,14 @@
+﻿@page
+@model HelpLocally.Web.RemoveModel
+@{
+    ViewData["Title"] = "Remove";
+}
+
+<h1>Remove Offfer @Model.Offer.Name</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Offer.Id" />
+    <input type="submit" value="Remove Offer" class="btn" />
+</form>
+
+<a asp-page="./Offers">GO BACK TO OFFERS</a>

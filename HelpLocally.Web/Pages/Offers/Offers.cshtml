@@ -1,0 +1,19 @@
+﻿@page
+@model HelpLocally.Web.OffersModel
+@{
+    ViewData["Title"] = "Offers";
+}
+
+<h1>Offers</h1>
+
+@foreach (var item in Model.Offer)
+{
+    <ul>
+        <li>Nazwa: @item.Name</li>
+        <li>Typ: @item.Type</li>
+        <li>Opis: @item.Description</li>
+        <li>Firma: @item.Company</li>
+        <li>Cena @item.Price</li>
+    </ul>
+    <a asp-page="./Remove" asp-route-id="@item.Id">REMOVE OFFER</a>
+}
